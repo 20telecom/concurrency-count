@@ -8,6 +8,21 @@
 
 ---
 
+### Previous IN1CLICK installation
+
+Concurrency Count can no longer be installed using the IN1CLICK repository installer.
+
+Before installing from this repository, remove any previous standalone installations:
+
+```bash
+rm -f /usr/local/bin/concurrency-count
+rm -f /root/concurrency-count
+```
+
+This does not remove any shell function or local output masking customisation that may wrap the command.
+
+---
+
 ## Overview
 
 **Concurrency Count** is a standalone Bash script that calculates the **maximum number of concurrent PJSIP calls** on a FreePBX or PBXact system over a specified time period.
@@ -64,10 +79,14 @@ All results are based on second-by-second analysis of answered calls (`dispositi
 
 ## Installation
 
-Run the following one-liner via SSH:
+Run the following commands via SSH:
 
 ```bash
-wget https://raw.githubusercontent.com/20telecom/IN1CLICK/main/concurrency-count -O /tmp/IN1CLICK && chmod +x /tmp/IN1CLICK && /tmp/IN1CLICK
+cd /root
+git clone https://github.com/20telecom/concurrency-count.git
+cd concurrency-count
+chmod +x concurrency-count
+cp concurrency-count /usr/local/bin/
 ```
 
 This installs the script to `/usr/local/bin/concurrency-count` and makes it executable.
@@ -79,6 +98,26 @@ concurrency-count --status
 ```
 
 ---
+
+## Updates
+
+Run the following commands via SSH:
+
+```bash
+cd /root/concurrency-count
+git pull
+chmod +x concurrency-count
+cp concurrency-count /usr/local/bin/
+```
+
+## Uninstall
+
+Run the following commands via SSH:
+
+```bash
+rm -f /usr/local/bin/concurrency-count
+rm -rf /root/concurrency-count
+```
 
 ## Usage
 
@@ -262,6 +301,14 @@ For support, queries, or feedback:
 
 **Email:** [support@20tele.com](mailto:support@20tele.com)  
 **Website:** [https://20tele.com](https://20tele.com)
+
+---
+
+## AI Disclosure
+
+This module has been developed with AI assistance for code generation, review,
+testing, and documentation. Changes should still be reviewed, tested, and
+accepted by a human maintainer before deployment.
 
 ---
 
