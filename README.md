@@ -1,10 +1,10 @@
 # Concurrency Count
 
-> ## New FreePBX/PBXact module available
+> ## A newer FreePBX/PBXact module is now available
 >
-> A newer, GUI-integrated version of **Concurrency Count** is now available as a FreePBX/PBXact module:
+> A newer, GUI-integrated version of **Concurrency Count** is available as a FreePBX/PBXact module:
 >
-> **[Concurrency Count for FreePBX/PBXact](https://github.com/kierknoby/concurrencycount)**
+> **[Concurrency Count 2 for FreePBX/PBXact](https://github.com/kierknoby/concurrencycount)**
 >
 > The new module adds Live View, Historical Reports and Live Wall directly within the FreePBX/PBXact GUI, with significantly expanded reporting, filtering, monitoring and alerting capabilities.
 >
